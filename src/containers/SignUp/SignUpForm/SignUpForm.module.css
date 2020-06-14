@@ -1,0 +1,32 @@
+.Form{
+    margin: auto;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0 0 2px #ddd;
+}
+.Form input{
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin: auto;
+    display: block;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: inherit;
+}
+.Form label{
+    padding: 20px;
+    font-size: 25px;
+
+}
+@media (min-width:600px){
+    .Form{
+        width: 500px;
+    }
+}
