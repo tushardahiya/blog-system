@@ -11,7 +11,6 @@
 }
 .Form input{
     box-sizing: border-box;
-    border: 1px solid #eee;
     margin: auto;
     display: block;
     width: 80%;

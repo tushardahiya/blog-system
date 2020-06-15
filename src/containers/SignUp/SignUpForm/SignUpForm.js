@@ -14,7 +14,8 @@ class SignUpForm extends Component {
                 value: '',
                 validation:{
                     required: true
-                }
+                },
+                valid: null
             },
             username: {
                 elementType: 'input',
@@ -25,7 +26,8 @@ class SignUpForm extends Component {
                 value: '',
                 validation:{
                     required: true
-                }
+                },
+                valid: null
             },
             email: {
                 elementType: 'input',
@@ -36,7 +38,8 @@ class SignUpForm extends Component {
                 value: '',
                 validation:{
                     required: true
-                }
+                },
+                valid: null
             },
             password: {
                 elementType: 'input',
@@ -47,7 +50,8 @@ class SignUpForm extends Component {
                 value: '',
                 validation:{
                     required: true
-                }
+                },
+                valid: null
             },
             confirm_password: {
                 elementType: 'input',
@@ -58,9 +62,21 @@ class SignUpForm extends Component {
                 value: '',
                 validation:{
                     required: true
-                }
+                },
+                valid: null
             }
         }
+    }
+    checkvalidityHandler = (validation,value) => {
+        let isValid = true;
+        // console.log(validation)
+        // console.log(value);
+        if(validation.required)
+        {
+            //console.log("Entered")
+            isValid &= value!=='';
+        }
+        return Boolean(isValid);
     }
     changeInputValueHandler = (event,id) => {
         let updatedInfo = {
@@ -70,6 +86,8 @@ class SignUpForm extends Component {
             ...updatedInfo[id],
         }
         updatedTuple.value = event.target.value;
+        updatedTuple.valid = this.checkvalidityHandler(updatedTuple.validation,event.target.value);
+        //console.log(updatedTuple.valid);
         updatedInfo[id] = updatedTuple;
         this.setState({
             info: updatedInfo
@@ -79,11 +97,7 @@ class SignUpForm extends Component {
         let formElements = []
         for(let i in this.state.info){
             let formElement = {
-                elementtype: this.state.info[i].elementType,
-                value: this.state.info[i].value,
-                config: {
-                    ...this.state.info[i].config
-                },
+                config:this.state.info[i],
                 id: i
             }
             formElements.push(formElement)
@@ -93,11 +107,12 @@ class SignUpForm extends Component {
                 <label>Sign-Up</label>
                 {formElements.map(formElement => {
                     return (
-                        <Input elementtype = {formElement.elementType} 
+                        <Input elementtype = {formElement.config.elementType} 
                         key = {formElement.id} 
-                        config = {formElement.config} 
-                        value={formElement.value}
-                        change = {(event)=>this.changeInputValueHandler(event,formElement.id)} />
+                        config = {formElement.config.config} 
+                        value={formElement.config.value}
+                        change = {(event)=>this.changeInputValueHandler(event,formElement.id)}
+                        valid = {formElement.config.valid} />
                     )
                 })}
                 {/* <Input elementtype="input" placeholder="..." type="text" value="..."/> */}
