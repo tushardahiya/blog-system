@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Route} from 'react-router-dom'
-import Layout from './containers/Layout/Layout'
+import Layout from './hoc/Layout/Layout'
 import SignUp from './containers/SignUp/SignUp'
+import Feed from './containers/Feed/Feed'
+import FullPost from './components/FullPost/FullPost'
+import {Switch} from 'react-router-dom'
 class App extends Component{
   render(){
     return(
       <Layout>
-        <Route path="/" exact render = {
-          () => {
-            return <h1>This is the home page</h1>
-          }
-        }/>
-        <Route path = "/sign-up" component={SignUp}/>
+        <Switch>
+          <Route path = "/sign-up" component={SignUp}/>
+          <Route path="/" exact component={Feed} />
+          <Route path="/:id" exact component={FullPost} />
+        </Switch>
       </Layout>
     )
   }

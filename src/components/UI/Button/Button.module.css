@@ -5,10 +5,9 @@
     background-color: white;
 }
 .valid{
-    color: lightgreen;
+    color: green;
 }
 .valid:hover{
-    color: green;
     font-weight: 700;
 }
 .invalid{
@@ -17,4 +16,5 @@
 .invalid:hover{
     color: red;
     font-weight: 700;
+    cursor: not-allowed;
 }
