@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import {Route} from 'react-router-dom'
 import Layout from './hoc/Layout/Layout'
@@ -16,7 +16,4 @@ class App extends Component{
           <Route path="/:id" exact component={FullPost} />
         </Switch>
       </Layout>
-    )
-  }
-}
 export default App;
