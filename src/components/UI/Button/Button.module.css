@@ -1,0 +1,20 @@
+.Button{
+    background: none;
+    border: none;
+    font-size: inherit;
+    background-color: white;
+}
+.valid{
+    color: green;
+}
+.valid:hover{
+    font-weight: 700;
+}
+.invalid{
+    color: salmon;
+}
+.invalid:hover{
+    color: red;
+    font-weight: 700;
+    cursor: not-allowed;
+}

@@ -1,0 +1,15 @@
+.FullPost{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    width: 70%;
+    margin-top: 50px;
+}
