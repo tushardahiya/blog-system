@@ -1,0 +1,24 @@
+.Card{
+    box-sizing: border-box;
+    box-shadow: 5px 5px  #ddd;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    height: 300px;
+    width: calc(100% * (1/3));
+    margin: 20px;
+}
+.Card:hover{
+    cursor: pointer;
+}
+.Card h5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+@media(max-width: 800px){
+    .Card{
+        width: 100%;
+    }
+}

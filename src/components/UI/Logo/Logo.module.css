@@ -1,0 +1,10 @@
+.Logo img{
+    width: 75px;
+    display: flex;
+    background-color: black;
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 15px;
+    display: flex;
+    justify-content: left;
+}
