@@ -25,7 +25,7 @@ const login = () => {
                         <input type="submit" value="SIGN IN" />
                     </form>
                     <p>
-                        Don't have an account ? <a href="">SIGN UP</a>
+                        Don't have an account ? <a href="/sign-up">SIGN UP</a>
                     </p>
                 </div>
             </div>
