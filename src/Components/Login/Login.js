@@ -1,21 +1,22 @@
 import React, { Fragment } from 'react';
-import './Login.css';
+import classes from './Login.module.css';
+import {NavLink} from 'react-router-dom'
 
 const login = () => {
     return (
         <Fragment>
-            <div className="wrapper">
-                <div className="form-wrapper">
+            <div className={classes.wrapper}>
+                <div className={classes.formwrapper}>
                     <h1>SIGN IN </h1>
                     <form>
-                        <div className="username">
+                        <div className={classes.username}>
                             <label>USERNAME</label>
                             <input
                                 type="text"
                                 required
                                 placeholder="Enter Your Username" />
                         </div>
-                        <div className="password">
+                        <div className={classes.password}>
                             <label>PASSWORD</label>
                             <input
                                 type="password"
@@ -25,7 +26,7 @@ const login = () => {
                         <input type="submit" value="SIGN IN" />
                     </form>
                     <p>
-                        Don't have an account ? <a href="/sign-up">SIGN UP</a>
+                        Don't have an account ? <NavLink to="/sign-up">SIGN UP</NavLink>
                     </p>
                 </div>
             </div>

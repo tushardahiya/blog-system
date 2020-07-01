@@ -1,0 +1,6 @@
+.formwrapper{
+    height: 100vh;
+    background-color: #258ea6;
+    display: flex;
+    vertical-align: center;
+}
