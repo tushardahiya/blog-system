@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classes from './SignUpForm.module.css'
 import Input from '../../../components/UI/Input/Input'
 import Button from '../../../components/UI/Button/Button'
+import {NavLink} from 'react-router-dom'
 class SignUpForm extends Component {
     state = {
         info: {
@@ -117,6 +118,8 @@ class SignUpForm extends Component {
                 })}
                 {/* <Input elementtype="input" placeholder="..." type="text" value="..."/> */}
                 <Button valid>Submit</Button>
+                <p>Already have an account? </p>
+                <NavLink to="/login">Login</NavLink>
             </div>
         )
     }

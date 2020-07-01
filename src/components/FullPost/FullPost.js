@@ -31,9 +31,9 @@ class FullPost extends Component{
             </div>
         }
         return(
-            <React.Fragment>
+            <div className={classes.postContainer}>
                 {post}
-            </React.Fragment>
+            </div>
         )
     }
 }
